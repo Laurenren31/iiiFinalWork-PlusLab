@@ -1,6 +1,6 @@
 # iiiFinalWork-PlusLab
 
-![image](https://github.com/Laurenren31/iiiMidWork-Unicorin/blob/main/unicoinHeadPic.png)
+![image](https://github.com/Laurenren31/iiiFinalWork-PlusLab/blob/main/plusLabHeadPic.png)
 * 在資策會上課時的團體期末作業，此git內的檔案均為我負責的部分，網頁的其他部分及完整介紹可參考 demoPPT 資料夾內的檔案
 * 開發使用 Figma 做前期規劃、VS CODE 撰寫 HTML / SCSS / React.js
 
