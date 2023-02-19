@@ -1,0 +1,224 @@
+.newNewsOne {
+  height: 1084px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: brightness(0.15);
+  position: fixed;
+  z-index: 1;
+}
+.mainNews {
+  margin-left: 9vw;
+  top: 172px;
+  margin-bottom: 252px;
+  width: 1184px;
+  background-color: $primary;
+  position: relative;
+  z-index: 2;
+  .newsBox {
+    padding: 48px 75px 0px 75px;
+    h3 {
+      display: inline-block;
+      cursor: pointer;
+      svg {
+        margin-right: 12px;
+        margin-bottom: 2px;
+        path {
+          fill: $blueLighter;
+        }
+      }
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: 0.05em;
+      color: $blueLighter;
+      &:hover {
+        color: $blue;
+        fill: $blue;
+      }
+      &:hover svg path {
+        fill: $blue;
+      }
+    }
+    h2 {
+      margin-top: 38px;
+      font-weight: 500;
+      font-size: 36px;
+      color: $white;
+      letter-spacing: 0.15em;
+    }
+    h4 {
+      margin-top: 18px;
+      margin-bottom: 24px;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+      letter-spacing: 0.15em;
+      color: $blue;
+      span {
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.05em;
+        margin-left: 12px;
+        color: $primaryLightestest;
+        position: relative;
+        top: -2px;
+      }
+    }
+    .imgBox {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      .iconBox {
+        display: flex;
+        flex-direction: column;
+        padding-top: 4px;
+        svg {
+          margin-bottom: 24px;
+          cursor: pointer;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .share {
+          &:hover path {
+            fill: $redDarker;
+          }
+        }
+        .collection {
+          &:hover path {
+            fill: $red;
+          }
+        }
+        #active {
+          path {
+            fill: $red;
+          }
+        }
+        .fontSize {
+          &:hover path {
+            fill: $redDarker;
+          }
+        }
+      }
+      .imgContainer {
+        width: 970px;
+        .newsImage {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    p {
+      width: 970px;
+      font-weight: 400;
+
+      letter-spacing: 0.1em;
+      color: $white;
+      margin-left: 60px;
+    }
+    .noImgNews {
+      display: flex;
+      justify-content: space-between;
+      .imgBox {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        .iconBox {
+          display: flex;
+          flex-direction: column;
+          padding-top: 4px;
+          svg {
+            margin-bottom: 24px;
+            cursor: pointer;
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        .imgContainer {
+          width: 970px;
+          .newsImage {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+
+      p {
+        width: 970px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 33px;
+        letter-spacing: 0.1em;
+        color: $white;
+      }
+    }
+  }
+}
+.hotNews {
+  z-index: 2;
+  width: 352px;
+  height: 640px;
+  left: 1380px;
+  background-color: $primary;
+  position: fixed;
+  top: 172px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  h4 {
+    margin-top: 50px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.15em;
+    color: $blueLighter;
+    svg {
+      margin-left: 4px;
+      fill: $blueLighter;
+      &:hover {
+        fill: $blue;
+        cursor: pointer;
+      }
+    }
+  }
+  .hotNewsBox {
+    border-bottom: solid 2px $primaryLightestest;
+    a {
+      width: 288px;
+      height: 100px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      text-decoration: none;
+      .hotNewsImg {
+        width: 114px;
+        height: 64px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        cursor: pointer;
+        &:hover ~ h5 {
+          color: $primaryLightestest;
+        }
+      }
+      h5 {
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.15em;
+        color: $white;
+        width: 158px;
+
+        &:hover {
+          color: $primaryLightestest;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  :last-child {
+    border-bottom: none;
+  }
+}

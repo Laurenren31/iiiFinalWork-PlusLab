@@ -1,0 +1,133 @@
+.newsTop {
+  height: 1080px;
+  background-color: $primary;
+  h1 {
+    position: relative;
+    display: inline-block;
+    color: $blue;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    letter-spacing: 0.15em;
+    border-bottom: solid 6px $red;
+    top: 152px;
+    margin-left: 859px;
+    margin-right: 859px;
+  }
+  .newsBox {
+    width: 81vw;
+    margin: 224px 9vw 0 9vw;
+    display: flex;
+    justify-content: space-between;
+    height: 666px;
+    .newsBoxLeft {
+      width: 768px;
+      .highlightNewsContainer {
+        h2 {
+          position: relative;
+          color: $white;
+          font-weight: 500;
+          font-size: 36px;
+          line-height: 54px;
+          letter-spacing: 0.1em;
+          top: 16px;
+          &:hover {
+            color: $primaryLightestest;
+            cursor: pointer;
+          }
+        }
+        .highlightNewsImg {
+          width: 752px;
+          height: 432px;
+          background-size: cover;
+        }
+        a {
+          text-decoration: none;
+          &:hover + a h2 {
+            color: $primaryLightestest;
+          }
+        }
+
+        h4 {
+          font-weight: 700;
+          font-size: 22px;
+          line-height: 27px;
+          letter-spacing: 0.15em;
+          color: $blue;
+          position: relative;
+          top: 26px;
+        }
+        p {
+          font-weight: 300;
+          font-size: 22px;
+          line-height: 33px;
+          letter-spacing: 0.1em;
+          color: $primaryLightestest;
+          position: relative;
+          top: 36px;
+        }
+      }
+    }
+    .newsBoxRight {
+      width: 768px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .highlightNewsContainer2 {
+        display: flex;
+        justify-content: space-between;
+        .highlightNewsImg2 {
+          width: 340px;
+          height: 198px;
+          background-size: cover;
+        }
+        .pBox {
+          width: 389px;
+          h3 {
+            position: relative;
+            color: $white;
+            font-weight: 500;
+            font-size: 30px;
+            line-height: 54px;
+            letter-spacing: 0.1em;
+            top: 16px;
+            &:hover {
+              color: $primaryLightestest;
+            }
+          }
+          a {
+            text-decoration: none;
+          }
+
+          h4 {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            letter-spacing: 0.15em;
+            color: $blue;
+            position: relative;
+            top: 20px;
+          }
+          p {
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 33px;
+            letter-spacing: 0.1em;
+            color: $primaryLightestest;
+            position: relative;
+            top: 30px;
+          }
+        }
+        a {
+          &:hover + .pBox a h3 {
+            color: $primaryLightestest;
+          }
+        }
+      }
+    }
+
+    .newsBoxRight {
+      width: 752px;
+    }
+  }
+}

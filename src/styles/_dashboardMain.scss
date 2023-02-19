@@ -1,0 +1,454 @@
+.dashboardMain {
+  height: 768px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 9vw 0 9vw;
+
+  .mainBox {
+    width: 82vw;
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    .collectionStock {
+      padding: 12px 10px 0px 20px;
+      width: 345px;
+      height: 588px;
+      background-color: $primaryLighter;
+      .collectionStockTitle {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        height: 63px;
+        input {
+          width: 240px;
+          background-color: $primary;
+          border-radius: 20px;
+          height: 40px;
+          margin-left: 20px;
+          padding: 0 0 0 52px;
+          color: $primaryLightestest;
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          border: none;
+          background-image: url("../img/searchIcon.png");
+          background-size: 24px;
+          background-repeat: no-repeat;
+          background-position: 16px;
+        }
+        .collection .collectionBackground {
+          cursor: pointer;
+          fill: $primaryLighter;
+          &:hover {
+            fill: $red;
+          }
+        }
+        #selected {
+          fill: $red;
+        }
+      }
+      .collectionStockListBox {
+        height: 513px;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          position: relative;
+          top: 12px;
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-track-piece {
+          background: $primary;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $primaryLightest;
+        }
+      }
+
+      table {
+        border-collapse: collapse;
+        position: relative;
+        top: -2px;
+        svg {
+          position: relative;
+          top: 3px;
+        }
+        tr {
+          &:hover {
+            background-color: $primaryLightest;
+            cursor: pointer;
+          }
+        }
+        td {
+          height: 58px;
+          border-top: solid 2px $primaryLightest;
+        }
+        tr > td:nth-child(1) {
+          width: 43px;
+        }
+        tr > td:nth-child(2) {
+          width: 180px;
+        }
+        tr > td:nth-child(3) {
+          width: 100px;
+          text-align: right;
+        }
+        p {
+          position: relative;
+          top: -1px;
+          color: $white;
+          font-weight: 400;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+        }
+        h6 {
+          position: relative;
+          top: -1px;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 20px;
+          color: $primaryLightestest;
+          letter-spacing: 0.1em;
+        }
+      }
+    }
+    .mainStock {
+      width: 1142px;
+      height: 612px;
+      h1 {
+        display: inline-block;
+        color: $white;
+        font-weight: 700;
+        font-size: 36px;
+        letter-spacing: 0.15em;
+        span {
+          padding-left: 16px;
+          font-weight: 500;
+          font-size: 30px;
+          color: $primaryLightestest;
+          letter-spacing: 0.1em;
+        }
+        svg {
+          margin-left: 20px;
+          position: relative;
+          top: 2px;
+          cursor: pointer;
+          &:hover {
+            fill: #e23965;
+          }
+        }
+      }
+      .stockInfoContainer {
+        height: 140px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: aqua;
+        .stockInfoBox {
+          width: 370px;
+          h2 {
+            font-weight: 700;
+            font-size: 32px;
+            letter-spacing: 0.05em;
+            display: inline-block;
+            :first-child {
+              margin-left: 8px;
+            }
+            span {
+              font-weight: 700;
+              font-size: 22px;
+              padding-left: 8px;
+              letter-spacing: 0.02em;
+            }
+          }
+          h3 {
+            padding-top: 4px;
+            font-weight: 500;
+            color: $white;
+            font-size: 28px;
+            letter-spacing: 0.1em;
+          }
+          h6 {
+            padding-top: 4px;
+            color: $primaryLightestest;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 33px;
+            letter-spacing: 0.1em;
+          }
+        }
+        table {
+          border-collapse: collapse;
+          color: $white;
+          width: 220px;
+          font-weight: 300;
+          font-size: 18px;
+          letter-spacing: 0.15em;
+          tr {
+            height: 36px;
+            border-bottom: solid 1.5px white;
+          }
+          tr > td:nth-child(2) {
+            text-align: right;
+          }
+        }
+      }
+      .stockTab {
+        table {
+          margin-top: 12px;
+          border: none;
+          border-collapse: collapse;
+          tr > td:nth-child(1) {
+            width: 107px;
+          }
+          tr > td:nth-child(2) {
+            width: 30px;
+          }
+
+          tr > td:nth-child(3) {
+            width: 141px;
+          }
+          tr > td:nth-child(4) {
+            width: 864px;
+          }
+          tr {
+            border-bottom: solid 2px $primaryLightestest;
+            height: 56px;
+          }
+          h2 {
+            font-weight: 600;
+            font-size: 32px;
+            letter-spacing: 0.1em;
+            display: inline-block;
+            color: $blue;
+            padding-bottom: 6px;
+            cursor: pointer;
+          }
+        }
+      }
+      .tabKChart {
+        .chartBox {
+          position: relative;
+          top: 12px;
+        }
+        .nowPrice {
+          position: relative;
+          width: 340px;
+          top: -324px;
+          left: 796px;
+          border-collapse: collapse;
+          z-index: 3;
+          tr {
+            height: 44px;
+            border-bottom: none;
+          }
+          tbody > tr:nth-child(1) {
+            height: 50px;
+          }
+          tbody > tr:nth-child(7) {
+            height: 50px;
+          }
+
+          tr > td:nth-child(1) {
+            width: 85px;
+          }
+          tr > td:nth-child(2) {
+            width: 77px;
+            text-align: right;
+          }
+          tr > td:nth-child(3) {
+            width: 16px;
+          }
+          tr > td:nth-child(4) {
+            width: 77px;
+          }
+          tr > td:nth-child(5) {
+            width: 85px;
+            text-align: right;
+          }
+          p {
+            color: $white;
+            font-weight: 300;
+            font-size: 18px;
+            letter-spacing: 0.15em;
+          }
+        }
+        .bBackground {
+          width: 170px;
+          height: 220px;
+          background-color: $greenDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -594px;
+          left: 796px;
+          z-index: 1;
+        }
+        .b0 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b1 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b2 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b3 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .b4 {
+          height: 44px;
+          background-color: $primary;
+          position: relative;
+          top: -814px;
+          left: 796px;
+          z-index: 2;
+        }
+        .a0 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a1 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a2 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a3 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+        .a4 {
+          height: 44px;
+          background-color: $redDarker;
+          opacity: 0.3;
+          position: relative;
+          top: -1033px;
+          left: 966px;
+          z-index: 1;
+        }
+      }
+      .tabInfo {
+        .stockBasicInfo {
+          width: 1142px;
+          tr {
+            height: 64px;
+          }
+          tr > td:nth-child(1) {
+            width: 160px;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: center;
+          }
+          tr > td:nth-child(2) {
+            width: 411px;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: left;
+            p {
+              padding-left: 12px;
+            }
+          }
+          tr > td:nth-child(3) {
+            width: 160px;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: center;
+          }
+          tr > td:nth-child(4) {
+            width: 411px;
+            font-weight: 300;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $white;
+            text-align: left;
+            p {
+              padding-left: 12px;
+            }
+          }
+          td {
+            border: solid 2px $primaryLightest;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+.lockDashBoardBackgroung {
+  display: block;
+  position: fixed;
+  background-color: $primaryDarker;
+  opacity: 0.8;
+  width: 100%;
+  left: 0px;
+  height: calc(100% - 88px);
+  z-index: 15;
+  top: 88px;
+}
+
+.lockDashBoardAlert {
+  margin: 0 50% 0 50%;
+  display: block;
+  position: fixed;
+  top: 400px;
+  z-index: 16;
+  transform: translate(-15%, 0%);
+  h4 {
+    width: 304px;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 27px;
+    color: $red;
+    letter-spacing: 0.15em;
+    transform: translate(-31%, 0%);
+  }
+}

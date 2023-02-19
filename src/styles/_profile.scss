@@ -1,0 +1,355 @@
+.profileTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .profileTitleBox {
+    width: 81vw;
+    padding-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .profileContainer {
+      display: flex;
+      align-items: center;
+      .profilePic {
+        width: 126px;
+        height: 126px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 63px;
+      }
+      .titleContainer {
+        padding-left: 36px;
+        h1 {
+          display: inline-block;
+          color: $primaryLightestest;
+          font-weight: 500;
+          font-size: 40px;
+          letter-spacing: 0.15em;
+        }
+        span {
+          padding-left: 16px;
+          font-weight: 700;
+          font-size: 40px;
+          color: $blue;
+          letter-spacing: 0.1em;
+        }
+        h2 {
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 48px;
+          color: $white;
+          letter-spacing: 0.15em;
+        }
+      }
+    }
+    .buttonBox {
+      display: flex;
+      a {
+        text-decoration: none;
+      }
+      .goToBackStage {
+        display: flex;
+        align-items: center;
+        background-color: $red;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        padding: 14px 26px 16px 26px;
+        border-radius: 32px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $redDarker;
+        }
+        img:nth-child(1) {
+          height: 18px;
+          width: 18px;
+          padding: 1px 8px 0px 2px;
+        }
+        img:nth-child(2) {
+          height: 18px;
+          width: 18px;
+          padding: 1px 0px 0px 8px;
+        }
+      }
+      .changeInfo {
+        margin-left: 24px;
+        display: flex;
+        align-items: center;
+        background-color: $blue;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        padding: 14px 26px 16px 26px;
+        border-radius: 32px;
+        cursor: pointer;
+        &:hover {
+          background-color: $blueDarker;
+        }
+      }
+    }
+    .changeInfoBackgroung {
+      display: block;
+      position: fixed;
+      background-color: $primaryDarker;
+      opacity: 0.7;
+      width: 100%;
+      left: 0px;
+      height: calc(100% - 88px);
+      z-index: 15;
+      top: 88px;
+    }
+    .changeInfoModel {
+      display: block;
+      position: fixed;
+      background-color: $primary;
+      top: 200px;
+      left: 715px;
+      padding: 24px 32px;
+      width: 426px;
+      height: 470px;
+      z-index: 16;
+      svg {
+        position: relative;
+        left: 400px;
+        cursor: pointer;
+        fill: $primaryLightestest;
+        &:hover {
+          fill: $white;
+        }
+      }
+      .changeProfilePic {
+        cursor: pointer;
+        width: 126px;
+        height: 126px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 63px;
+        margin: 0 50% 24px 50%;
+        transform: translateX(-50%);
+        &:hover {
+          filter: brightness(0.5);
+        }
+        &:hover + p {
+          display: block;
+        }
+        label {
+          width: 126px;
+          height: 126px;
+          border-radius: 63px;
+          display: block;
+          cursor: pointer;
+          position: relative;
+          top: 0px;
+          left: 0px;
+
+          #uploadProfilePic {
+            display: none;
+          }
+        }
+      }
+      p {
+        cursor: pointer;
+        display: none;
+        z-index: 22;
+        position: fixed;
+        top: 370px;
+        left: 928px;
+        color: $white;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        pointer-events: none;
+        &:hover {
+          display: block;
+        }
+      }
+
+      .changeProfilePicButton {
+        opacity: 1;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      .changeNickName,
+      .changeUserID,
+      .changeMail {
+        background-color: $primaryLighter;
+        width: 376px;
+        height: 40px;
+        padding: 0 0 0 50px;
+        position: relative;
+        top: -6px;
+        margin-bottom: 16px;
+        color: $primaryLightestest;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0.15em;
+        border: none;
+      }
+      .changeNickName {
+        background-image: url("../img/userIdIcon.svg");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 16px;
+      }
+      .changeUserID {
+        background-image: url("../img/userIdIcon.svg");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 16px;
+      }
+      .changeMail {
+        background-image: url("../img/mailIcon.svg");
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: 16px;
+      }
+
+      h2 {
+        position: relative;
+        top: -18px;
+        color: $white;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 48px;
+        letter-spacing: 0.15em;
+        border-bottom: solid 2px $primaryLightest;
+        text-align: center;
+        height: 52px;
+      }
+
+      .submit {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $blue;
+        border: none;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        letter-spacing: 0.15em;
+        padding: 14px 26px 16px 26px;
+        border-radius: 32px;
+        cursor: pointer;
+        width: 426px;
+        &:hover {
+          background-color: $blueDarker;
+        }
+      }
+    }
+  }
+}
+
+.profileStockCollection,
+.profileOwnCourse,
+.profileCourseCollection,
+.profileArticleCollection {
+  min-height: 600px;
+  table {
+    width: 1565px;
+
+    border: none;
+    border-collapse: collapse;
+    margin: 40px 9vw 0 9vw;
+    tr > td:nth-child(2) {
+      width: 30px;
+    }
+
+    tr > td:nth-child(4) {
+      width: 30px;
+    }
+
+    tr > td:nth-child(6) {
+      width: 30px;
+    }
+
+    tr {
+      border-bottom: solid 2px $primaryLightestest;
+      height: 54px;
+      td {
+        display: inline-block;
+      }
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 32px;
+      letter-spacing: 0.1em;
+      display: inline-block;
+      color: $blue;
+      padding-bottom: 6px;
+      cursor: pointer;
+    }
+  }
+}
+
+.profileStockCollection {
+  .showDataBox {
+    width: 1565px;
+    display: flex;
+    margin: 0 9vw 0 9vw;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .stockCollectionBox {
+      min-width: 765px;
+      height: 173px;
+      background-color: $primaryLighter;
+      margin-top: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .pContainer {
+        display: flex;
+        align-items: center;
+        svg {
+          margin: 0 36px 0 36px;
+        }
+        .pBox {
+          margin: 8px 0px 0px 0px;
+          h2 {
+            color: $white;
+            font-weight: 700;
+            font-size: 36px;
+            letter-spacing: 0.15em;
+            span {
+              margin-left: 16px;
+              font-weight: 500;
+              font-size: 30px;
+              letter-spacing: 0.1em;
+              color: $primaryLightestest;
+            }
+          }
+          h3 {
+            font-weight: 700;
+            font-size: 26px;
+            line-height: 48px;
+            letter-spacing: 0.05em;
+            span {
+              margin-left: 16px;
+              font-size: 24px;
+            }
+            margin: 8px 0px 0px 0px;
+          }
+        }
+      }
+
+      .chartBox {
+        float: right;
+        width: 160px;
+        height: 80px;
+        margin: 0 36px 0px 16px;
+        canvas {
+          margin: 0 0 0 0;
+        }
+      }
+    }
+    :last-child {
+      margin-bottom: 32px;
+    }
+  }
+}
